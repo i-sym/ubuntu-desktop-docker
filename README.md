@@ -44,7 +44,7 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/Tallinn \
-  -p 3389:3389 `# rdp` \
+  -p 33890:3389 `# rdp` \
   -p 2222:2222 `# ssh` \
   --shm-size="1gb" \
   --security-opt seccomp=unconfined \
@@ -71,6 +71,10 @@ After that, you can use login _abc_ and the newly set password to log in to the 
 
 > ☝ You can [stop][docker_stop] and [restart][docker_start] the created container from Docker without losing your data.
 > It is equivalent to system shutdown from the containerized Ubuntu's point of view. However, keep in mind that [_deleting_][docker_rm] your container will destroy all the data and software contained inside.
+
+### Development
+
+For writing and editing code on the container you can either install an editor inside the container or use Remote SSH with your preferred IDE. Here you can find an example for Visual Studio Code
 
 ### Advanced usage
 
